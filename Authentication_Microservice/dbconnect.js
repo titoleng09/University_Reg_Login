@@ -1,10 +1,11 @@
 // STEP-1 : IMPORT MONGOOSE PACKAGE
+require('dotenv').config();
 const dns = require('dns');
 dns.setServers(['8.8.8.8', '1.1.1.1']);
 const mongoose = require('mongoose');
 
 // Database Connection URL
-const uri = "mongodb+srv://toruleng_db_user:ZQ696AYlwqCaa9Oe@cluster0.ukfe1c3.mongodb.net/auppCN?appName=Cluster0";
+const uri = process.env.MONGO_URI;
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
 async function run() {
