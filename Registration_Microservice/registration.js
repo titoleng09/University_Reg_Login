@@ -28,6 +28,11 @@ function uniqueid(min, max) {
 }
 
 //REG API
+app.get('/', (req, res) => {
+  res.send('REG API IS WORKING');
+});//CLOSE GET METHOD
+
+
 app.post('/reg', (req, res) => {
   console.log("REG API EXECUTED")
   const pobj = new PersonModel({
