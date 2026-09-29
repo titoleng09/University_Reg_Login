@@ -1,7 +1,5 @@
 // STEP-1 : IMPORT MONGOOSE PACKAGE
 require('dotenv').config();
-const dns = require('dns');
-dns.setServers(['8.8.8.8', '1.1.1.1']);
 const mongoose = require('mongoose');
 
 // Database Connection URL
@@ -16,7 +14,7 @@ async function run() {
     await mongoose.connection.db.admin().command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
-    // Ensures that the client will close when you finish/error
+    // Ensures that the client will close when you finish/errorß
     //await mongoose.disconnect();
   }
 }

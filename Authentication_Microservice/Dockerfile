@@ -11,4 +11,4 @@ COPY . .
 
 EXPOSE 5002
 
-CMD ["node", "login.js"] 
+CMD ["node", "authentication-service.js"] 

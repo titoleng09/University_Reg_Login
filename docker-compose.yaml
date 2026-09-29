@@ -1,0 +1,20 @@
+services:
+  login-service:
+    image: login_micro
+    ports: 
+      - "5002:5002"
+    env_file:
+      - ./Login_Microservice/.env
+    restart: always
+
+  registration-service:
+    image: reg_micro
+    ports: 
+      - "5001:5001"
+    restart: always
+    env_file:
+      - ./Registration_Microservice/.env
+
+
+
+    
